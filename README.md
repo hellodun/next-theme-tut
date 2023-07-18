@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Implementing Dark Theme in NextJS 13 with TailwindCSS
 
-## Getting Started
+### In this repo, I create a simple landing page with ```Light``` and ```Dark``` theme enabled
 
-First, run the development server:
+## Quick Setup
 
-```bash
+1. Create a NextJS app with TailwindCSS.
+```console
+npx create-next-app@latest next-theme-tut
+```
+2. Install ```next-themes``` theme package and ```lucide-react``` icon package.
+```console
+npm i next-themes lucide-react
+```
+3. Run the dev app
+```console
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Customize your Landing page by adding a theme toggle button in the ```nav``` section of the page as in the ```app/layout.js``` and editing the ```app/pages.js``` files.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+5. Set up the ```ThemeProvider``` from ```next-themes``` in a ```Providers``` component that will wrap all child components of the app. This will enable all ```children``` gain access to the ```ThemeProvider``` hence theme functionality.<br><br>
+Check this implementaion in the ```app/providers.js``` and ```app/components/ThemeButton.js``` files.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+6. Watch out for React Hydration error by checking the ```next-themes``` README in npm [here](https://www.npmjs.com/package/next-themes?activeTab=readme) and when to use ```suppressHydrationWarning``` in your app in the NextJS docs [here](https://nextjs.org/docs/messages/react-hydration-error).
 
-## Learn More
+### Thank you
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
