@@ -24,5 +24,14 @@ Check this implementaion in the ```app/providers.js``` and ```app/components/The
 
 6. Watch out for React Hydration error by checking the ```next-themes``` README in npm [here](https://www.npmjs.com/package/next-themes?activeTab=readme) and when to use ```suppressHydrationWarning``` in your app in the NextJS docs [here](https://nextjs.org/docs/messages/react-hydration-error).
 
+
+## Screenshots
+
+1. Lightmode
+![lightmode](screenshots/lightmode.png)
+
+2. Darkmode
+![lightmode](screenshots/darkmode.png)
+
 ### Thank you
 
